@@ -1,5 +1,4 @@
 
-console.log("hi");
 function getComputerChoice(){
     const choices = ["ROCK", "PAPER", "SCISSORS"];
     let index = Math.round(Math.random() * 2);
@@ -12,10 +11,14 @@ function getWinner(computer, player){
     if (computer == player){
         winner =  "No one"
     }
-    else if ( (computer+player).indexOf("PAPER")  != -1 && (computer+player).indexOf("SCISSORS") != -1){
+    else if ( (computer+player).indexOf("PAPER")  != -1 && 
+              (computer+player).indexOf("SCISSORS") != -1)
+            {
         winner = (computer == "SCISSORS") ? "Computer": "Player";
     }
-    else if ( (computer+player).indexOf("PAPER")  != -1 && (computer+player).indexOf("ROCK") != -1){
+    else if ( (computer+player).indexOf("PAPER")  != -1 && 
+              (computer+player).indexOf("ROCK") != -1)
+        {
         winner = (computer == "PAPER") ?  "Computer": "Player";
     }
     else {
@@ -25,6 +28,22 @@ function getWinner(computer, player){
 
     return winner + " wins. Computer: "+ computer + " Player: " + player;
 }
+
+const player_rock = document.querySelector(".player.rock");
+const results = document.querySelector(".results");
+player_rock.addEventListener("click", function (){
+    results.textContent = getWinner(getComputerChoice(), "rock")});
+
+
+const player_paper = document.querySelector(".player.paper");
+player_paper.addEventListener("click", function (){
+        results.textContent = getWinner(getComputerChoice(), "paper")});
+
+const player_scissors = document.querySelector(".player.scissors");
+player_scissors.addEventListener("click", function (){
+        results.textContent = getWinner(getComputerChoice(), "scissors")});
+    
+
 
 
 
