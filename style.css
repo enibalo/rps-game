@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+@import url(https://fonts.googleapis.com/css?family=Lilita+One);
+
+body{
+    text-align:center;
+    margin:0px;
+    padding:0px;
+}
+
+.footer{
+    margin:0px;
+    padding:18px; 
+    text-decoration:none;
+
+}
+
+.footer a{
+    color:black;
+    text-decoration:none;
+    
+}
+
+.header{
+    margin:0px;
+    padding:18px;
+    font-size:35px;
+  
+
+}
+
+h1{
+    margin:0px;
+    padding:8px;
+}
+
+h2{
+    margin-top:0px;
+}
+
+#weapon{
+    height:250px;
+    width:200px;
+    
+}
+
+#weapon.computer{
+    margin:16px 100px;
+    padding:20px;
+    border-radius:25%;
+    background-color:rgba(255, 0, 106, 0.425);
+    border:2px solid black;
+}
+
+
+
+button{
+    margin:16px 100px;
+    padding:20px;
+    border-radius:25%;
+    background-color:rgba(255, 0, 106, 0.425);
+    border:2px solid black;
+}
+   
+
+button:active{
+    background-color:rgba(255, 0, 106, 0.747);
+}
+
+.container{
+    display:inline;
+    padding:16px;
+    text-align:center;
+    margin:10px;
+    
+}
