@@ -61,9 +61,13 @@ button:active{
 }
 
 .container{
-    display:inline;
     padding:16px;
     text-align:center;
     margin:10px;
-    
+}
+.container.computer{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }

@@ -51,8 +51,7 @@ player_rock.addEventListener("click", function (){
     let computer_choice = getComputerChoice();
     let winner = getWinner(computer_choice, "rock");
     computer.src = getComputerImage(computer_choice);
-    results.textContent = winner + " wins. Computer: "+ computer_choice + 
-    " Player: ROCK";
+    results.textContent = winner + " wins. Computer: "+ computer_choice;
 });
 
 
@@ -62,8 +61,7 @@ player_paper.addEventListener("click", function (){
     let computer_choice = getComputerChoice();
     let winner = getWinner(computer_choice, "paper");
     computer.src = getComputerImage(computer_choice);
-    results.textContent = winner + " wins. Computer: "+ computer_choice + 
-    " Player: PAPER";
+    results.textContent = winner + " wins. Computer: "+ computer_choice;
 });
 
 const player_scissors = document.querySelector(".player.scissors");
@@ -71,8 +69,7 @@ player_scissors.addEventListener("click", function (){
     let computer_choice = getComputerChoice();
     let winner = getWinner(computer_choice, "scissors");
     computer.src = getComputerImage(computer_choice);
-    results.textContent = winner + " wins. Computer: "+ computer_choice + 
-    " Player: SCISSORS";
+    results.textContent = winner + " wins. Computer: "+ computer_choice;
 });
     
 
