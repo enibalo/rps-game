@@ -26,22 +26,54 @@ function getWinner(computer, player){
         winner = (computer == "ROCK") ? "Computer": "Player";
     }
 
-    return winner + " wins. Computer: "+ computer + " Player: " + player;
+    return winner;
+}
+//<a href="https://www.flaticon.com/free-icons/question-mark" title="question-mark icons">Question-mark icons created by Freepik - Flaticon</a>
+function getComputerImage(computer){
+    let answer = "";
+    if (computer === "ROCK"){
+        answer = "./img/rock.png"
+    }
+    else if (computer === "SCISSORS"){
+        answer = "./img/scissors.png"
+    }
+   else{
+       answer = "./img/paper.png" 
+    }
+    return answer;
 }
 
 const player_rock = document.querySelector(".player.rock");
 const results = document.querySelector(".results");
+const computer = document.querySelector("#weapon.computer");
+
 player_rock.addEventListener("click", function (){
-    results.textContent = getWinner(getComputerChoice(), "rock")});
+    let computer_choice = getComputerChoice();
+    let winner = getWinner(computer_choice, "rock");
+    computer.src = getComputerImage(computer_choice);
+    results.textContent = winner + " wins. Computer: "+ computer_choice + 
+    " Player: ROCK";
+});
+
 
 
 const player_paper = document.querySelector(".player.paper");
 player_paper.addEventListener("click", function (){
-        results.textContent = getWinner(getComputerChoice(), "paper")});
+    let computer_choice = getComputerChoice();
+    let winner = getWinner(computer_choice, "paper");
+    computer.src = getComputerImage(computer_choice);
+    results.textContent = winner + " wins. Computer: "+ computer_choice + 
+    " Player: PAPER";
+});
 
 const player_scissors = document.querySelector(".player.scissors");
 player_scissors.addEventListener("click", function (){
-        results.textContent = getWinner(getComputerChoice(), "scissors")});
+    let computer_choice = getComputerChoice();
+    let winner = getWinner(computer_choice, "scissors");
+    computer.src = getComputerImage(computer_choice);
+    results.textContent = winner + " wins. Computer: "+ computer_choice + 
+    " Player: SCISSORS";
+});
     
 
 
