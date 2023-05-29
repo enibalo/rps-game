@@ -46,10 +46,27 @@ function getComputerImage(computer){
 const player_rock = document.querySelector(".player.rock");
 const results = document.querySelector(".results");
 const computer = document.querySelector("#weapon.computer");
+const score_computer = document.querySelector("h2.computer");
+const score_player = document.querySelector("h2.player");
 
 player_rock.addEventListener("click", function (){
     let computer_choice = getComputerChoice();
     let winner = getWinner(computer_choice, "rock");
+
+    if ( score_player.textContent.indexOf("W") === -1 &&
+     score_computer.textContent.indexOf("W") === -1){
+        if (winner === "Player"){
+            if (score_player.textContent.substr(-1) === "4"){
+                score_player.textContent = "PLAYER WINS! MATCH OVER."
+            }else{score_player.textContent = "Player: " + 
+            (Number(score_player.textContent.substr(-1)) + 1);}    
+        }else if (winner === "Computer"){
+            if (score_computer.textContent.substr(-1) === "4"){
+                score_computer.textContent = "COMPUTER WINS! MATCH OVER."
+            }else{score_computer.textContent = "Computer: " + 
+            (Number(score_computer.textContent.substr(-1)) + 1);}    
+        }
+    }
     computer.src = getComputerImage(computer_choice);
     results.textContent = winner + " wins. Computer: "+ computer_choice;
 });
@@ -57,17 +74,49 @@ player_rock.addEventListener("click", function (){
 
 
 const player_paper = document.querySelector(".player.paper");
+
 player_paper.addEventListener("click", function (){
     let computer_choice = getComputerChoice();
     let winner = getWinner(computer_choice, "paper");
+
+    if ( score_player.textContent.indexOf("W") === -1 
+    && score_computer.textContent.indexOf("W") === -1){
+        if (winner === "Player"){
+            if (score_player.textContent.substr(-1) === "4"){
+                score_player.textContent = "PLAYER WINS! MATCH OVER."
+            }else{score_player.textContent = "Player: " + 
+            (Number(score_player.textContent.substr(-1)) + 1);}    
+        }else if (winner === "Computer"){
+            if (score_computer.textContent.substr(-1) === "4"){
+                score_computer.textContent = "COMPUTER WINS! MATCH OVER."
+            }else{score_computer.textContent = "Computer: " + 
+            (Number(score_computer.textContent.substr(-1)) + 1);}    
+        }
+    }
     computer.src = getComputerImage(computer_choice);
     results.textContent = winner + " wins. Computer: "+ computer_choice;
 });
 
 const player_scissors = document.querySelector(".player.scissors");
+
 player_scissors.addEventListener("click", function (){
     let computer_choice = getComputerChoice();
     let winner = getWinner(computer_choice, "scissors");
+
+    if ( score_player.textContent.indexOf("W") === -1 && 
+        score_computer.textContent.indexOf("W") === -1){
+        if (winner === "Player"){
+            if (score_player.textContent.substr(-1) === "4"){
+                score_player.textContent = "PLAYER WINS! MATCH OVER."
+            }else{score_player.textContent = "Player: " + 
+            (Number(score_player.textContent.substr(-1)) + 1);}    
+        }else if (winner === "Computer"){
+            if (score_computer.textContent.substr(-1) === "4"){
+                score_computer.textContent = "COMPUTER WINS! MATCH OVER."
+            }else{score_computer.textContent = "Computer: " + 
+            (Number(score_computer.textContent.substr(-1)) + 1);}    
+        }
+    }
     computer.src = getComputerImage(computer_choice);
     results.textContent = winner + " wins. Computer: "+ computer_choice;
 });

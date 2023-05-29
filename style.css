@@ -23,13 +23,17 @@ body{
     margin:0px;
     padding:18px;
     font-size:35px;
+   
 }
 
-h1, h2{
+
+h1, h2,h3{
     margin:0px;
     padding:8px;
 }
 
+
+    
 
 #weapon{
     height:250px;
