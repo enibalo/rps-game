@@ -1,2 +1,2 @@
 # rps-game
-A fun rock, paper scissor game.
+Play a fun game of rock, paper scissors with a computer using this website!
